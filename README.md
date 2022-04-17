@@ -26,6 +26,7 @@ location ^~ / {
 	#proxy_pass_request_headers on;
 	proxy_intercept_errors on;
 	proxy_set_header User-Agent "Go-http-client/2.0";
-}```
+}
+```
 
 The current Version is fully functional, but it's missing some Messaging and Logging Options.
