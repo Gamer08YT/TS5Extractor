@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="512" prefWidth="1024" style="-fx-background-color: #1c2538;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.bytestore.teamspeakextraction.WelcomeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Text fill="WHITE" text="TeamSpeak5 Matrix Extractor">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+        <HBox alignment="CENTER" style="-fx-background-color: #1c2538;">
+            <TextField fx:id="pathIO" alignment="CENTER" focusTraversable="false" prefWidth="650" promptText="Select your TeamSpeak5 settings.db">
+                <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                </padding>
+            </TextField>
+            <Button onAction="#onExplorer" style="-fx-background-color: #205883; -fx-border-color: #205881; -fx-border-radius: 100px;" text="Open Explorer" textFill="WHITE">
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                </padding>
+            </Button>
+            <padding>
+                <Insets top="50.0" />
+            </padding>
+        </HBox>
+        <CheckBox fx:id="agreeIO" mnemonicParsing="false" text="Accept that your Matrix Account can be damaged." textFill="WHITE">
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+        </CheckBox>
+        <Button mnemonicParsing="false" onAction="#onClick" style="-fx-background-color: #205883; -fx-border-color: #205881; -fx-border-radius: 100px;" text="Extract your Credentials" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="25.0" />
+            </VBox.margin>
+        </Button>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="984.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@avatar.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="WHITE" text="Made with ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ff00ab" layoutX="10.0" layoutY="32.0" text="♥">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Text fill="WHITE" layoutX="10.0" layoutY="32.0" text="by JaXnPriVate">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="60.0" />
+         </VBox.margin>
+      </HBox>
+
+    </children>
+</VBox>
