@@ -15,6 +15,10 @@ Windows: %appdata%/TeamSpeak/settings.db
 
 To use your Credentials you need to change your User Agent to ``Go-http-client/2.0``.
 
+![image](https://user-images.githubusercontent.com/31771657/163794657-50a88444-0d4d-4980-a40a-50507c6286d4.png)
+
+![image](https://user-images.githubusercontent.com/31771657/163794746-f3e2460e-6332-4f43-9fef-e0c13f0b2d14.png)
+
 When you like to use a Mobile App or the Elements Desktop App, you can create a Reverse Proxy with NGINX to do that automatically.
 
 ```
