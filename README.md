@@ -1,6 +1,8 @@
 # TS5Extractor
 Extract your user data from Matrix from the TeamSpeak database to be able to use it in Elements, for example.
 
+For testing purposes only, it is not recommended to use TeamSpeak Chat with other services. Since TeamSpeak has not yet integrated or prohibited all matrix functions that cause errors.
+
 Download current Build -> [Download Here](https://space.byte-store.de/external/bytestore/download/software/extractor/TeamSpeakExtraction.zip)
 
 ![image](https://user-images.githubusercontent.com/31771657/163729102-b670fb86-ace7-4c72-b8e6-1f6016b049c6.png)
