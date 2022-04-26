@@ -3,7 +3,10 @@ Extract your user data from Matrix from the TeamSpeak database to be able to use
 
 For testing purposes only, it is not recommended to use TeamSpeak Chat with other services. Since TeamSpeak has not yet integrated or prohibited all matrix functions that cause errors.
 
-Download current Build -> [Download Here](https://space.byte-store.de/external/bytestore/download/software/extractor/TeamSpeakExtraction.zip)
+Download current Build -> [Download Here](https://space.byte-store.de/external/bytestore/download/software/extractor/TeamSpeakExtraction.zip)<br>
+Download current Beta Build -> [Download Here](https://space.byte-store.de/external/bytestore/download/software/extractor/TeamSpeakExtraction-1.10.zip)
+
+Beta features Function to extract Data from the (new TS5 Servers) Matrix Implementation. 
 
 ![image](https://user-images.githubusercontent.com/31771657/163729102-b670fb86-ace7-4c72-b8e6-1f6016b049c6.png)
 
