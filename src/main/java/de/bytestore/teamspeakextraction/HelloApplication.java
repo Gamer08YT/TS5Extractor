@@ -9,6 +9,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.sun.jna.platform.win32.WinDef.HWND;
+import com.sun.jna.platform.win32.User32;
+
 public class HelloApplication extends Application {
     // Store Debug Logs.
     public static ArrayList<String> debugIO = new ArrayList<>();
@@ -39,6 +42,10 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("matrix.png")));
         stage.show();
+
+        //Set Windows 10/11 title bar to dark mode
+        HWND hwnd = User32.INSTANCE.FindWindow(null, "TeamSpeak5 Matrix Tools");
+        DwmApi.setDarkModeTitleBar(hwnd, true);
 
         // Set Stage Global.
         HelloApplication.stageIO = stage;

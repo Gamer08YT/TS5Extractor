@@ -26,7 +26,7 @@ To use your Credentials you need to change your User Agent to ``Go-http-client/2
 
 When you like to use a Mobile App or the Elements Desktop App, you can create a Reverse Proxy with NGINX to do that automatically.
 
-```
+```nginx
 location ^~ / {
 	proxy_ssl_server_name on;
 	#proxy_ssl_name "sni.cloudflaressl.com";
@@ -39,3 +39,30 @@ location ^~ / {
 ```
 
 The current Version is fully functional, but it's missing some Messaging and Logging Options.
+
+## Login into TS5 Server Matrix Chat
+
+### 1. Select Homebase
+Select any Homebase you want.
+
+![Tool opened with list of Homebases](https://files.dunkelmann.eu/other/TS5ExtractorImg/bild1.png)
+
+### 2. Copy Access Token
+![Selected Homebase with credentials](https://files.dunkelmann.eu/other/TS5ExtractorImg/bild2.png)
+
+### 3. Login using Element
+
+Open Element Web or Element Desktop. 
+Then, press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> to open JavaScript-Console.
+
+Execute 
+```js
+mxLoginWithAccessToken("https://<your-home-server>", "syt_your_token");
+```
+in order to log in.
+
+![Element with Dev Console](https://files.dunkelmann.eu/other/TS5ExtractorImg/bild3.png)
+
+### 4. You're in!
+
+![Logged into Element](https://files.dunkelmann.eu/other/TS5ExtractorImg/bild4.png)
