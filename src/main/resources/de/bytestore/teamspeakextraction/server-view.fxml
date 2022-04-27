@@ -1,77 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<VBox alignment="CENTER" prefHeight="512" prefWidth="1024" style="-fx-background-color: #1c2538;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.bytestore.teamspeakextraction.CredentialsController">
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" prefHeight="512" prefWidth="1024"
+      style="-fx-background-color: #1c2538;" fx:controller="de.bytestore.teamspeakextraction.ServerCredentials">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
     <children>
         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="984.0">
             <children>
                 <ImageView fitHeight="34.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@wand.png" />
+                        <Image url="@talk.png"/>
                     </image>
                     <HBox.margin>
-                        <Insets right="15.0" />
+                        <Insets right="15.0"/>
                     </HBox.margin>
                 </ImageView>
-                <Text fill="WHITE" text="Simsalabim...">
+                <Text fill="WHITE" text="Servers...">
                     <font>
-                        <Font size="20.0" />
+                        <Font size="20.0"/>
                     </font>
                 </Text>
             </children>
         </HBox>
-        <TextField fx:id="usernameIO" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
-                   prefWidth="650" promptText="Username">
-            <padding>
-                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
-            </padding>
-            <VBox.margin>
-                <Insets top="50.0"/>
-            </VBox.margin>
-        </TextField>
-        <TextField fx:id="passwordIO" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
-                   prefWidth="650" promptText="Password">
-            <padding>
-                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
-            </padding>
-            <VBox.margin>
-                <Insets top="25.0"/>
-            </VBox.margin>
-        </TextField>
-        <TextField fx:id="homebaseIO" focusTraversable="false" visible="false" maxHeight="-Infinity"
-                   maxWidth="-Infinity" prefWidth="650" promptText="Homebase">
-            <padding>
-                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
-            </padding>
-            <VBox.margin>
-                <Insets top="50.0"/>
-            </VBox.margin>
-        </TextField>
-        <HBox alignment="CENTER" style="-fx-background-color: #1c2538;">
+        <HBox fx:id="boxIO" alignment="CENTER" style="-fx-background-color: #1c2538;">
             <padding>
                 <Insets top="25.0"/>
             </padding>
-            <children>
-                <TextArea fx:id="logIO" prefHeight="100.0" prefWidth="650.0" promptText="Debug Log"/>
-            </children>
         </HBox>
+
+        <CheckBox fx:id="agreeIO" mnemonicParsing="false" text="Accept that your Matrix Account can be damaged."
+                  textFill="WHITE">
+            <VBox.margin>
+                <Insets top="25.0"/>
+            </VBox.margin>
+        </CheckBox>
+        <Button mnemonicParsing="false" onAction="#onClick"
+                style="-fx-background-color: #205883; -fx-border-color: #205881; -fx-border-radius: 100px;"
+                text="Extract your Credentials" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="25.0"/>
+            </VBox.margin>
+        </Button>
+
         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="984.0">
             <children>
                 <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@avatar.png" />
+                        <Image url="@avatar.png"/>
                     </image>
                     <HBox.margin>
-                        <Insets />
+                        <Insets/>
                     </HBox.margin>
                 </ImageView>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -80,29 +72,29 @@
                             <children>
                                 <Text fill="WHITE" text="Made with ">
                                     <font>
-                                        <Font size="20.0" />
+                                        <Font size="20.0"/>
                                     </font>
                                 </Text>
                                 <Text fill="#ff00ab" layoutX="10.0" layoutY="32.0" text="♥">
                                     <font>
-                                        <Font size="30.0" />
+                                        <Font size="30.0"/>
                                     </font>
                                 </Text>
                             </children>
                         </HBox>
                         <Text fill="WHITE" layoutX="10.0" layoutY="32.0" text="by JaXnPriVate">
                             <font>
-                                <Font name="System Bold" size="12.0" />
+                                <Font name="System Bold" size="12.0"/>
                             </font>
                         </Text>
                     </children>
                     <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="10.0"/>
                     </HBox.margin>
                 </VBox>
             </children>
             <VBox.margin>
-                <Insets top="60.0" />
+                <Insets top="60.0"/>
             </VBox.margin>
         </HBox>
 

@@ -1,20 +1,9 @@
 package de.bytestore.teamspeakextraction;
 
-import com.google.protobuf.UnknownFieldSet;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.FileChooser;
-import javafx.stage.StageStyle;
 
-import java.io.File;
-import java.io.IOException;
-import java.sql.*;
-import java.util.List;
 import java.util.function.Consumer;
 
 public class CredentialsController {
@@ -22,6 +11,9 @@ public class CredentialsController {
 
     @FXML
     private TextField usernameIO;
+
+    @FXML
+    private TextField homebaseIO;
 
     @FXML
     private TextField passwordIO;
@@ -33,6 +25,14 @@ public class CredentialsController {
         // initialization here, if needed...
         usernameIO.setText(CredentialsController.credentialsIO.getUsername());
         passwordIO.setText(CredentialsController.credentialsIO.getPassword());
+        homebaseIO.managedProperty().bind(homebaseIO.visibleProperty());
+
+        if (CredentialsController.credentialsIO.getToken() != null) {
+            passwordIO.setPromptText("Token");
+            passwordIO.setText(CredentialsController.credentialsIO.getToken());
+            homebaseIO.setText(CredentialsController.credentialsIO.getHomebase());
+            homebaseIO.setVisible(true);
+        }
 
         // Store Debug Logs.
         StringBuilder debugIO = new StringBuilder();
