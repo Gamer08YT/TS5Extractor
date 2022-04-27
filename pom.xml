@@ -14,9 +14,20 @@
         <junit.version>5.8.2</junit.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <jna.version>4.5.0</jna.version>
     </properties>
 
     <dependencies>
+        <dependency> <!-- JNA dependency -->
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>${jna.version}</version>
+          </dependency>
+          <dependency> <!-- JNA platform dependency -->
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>${jna.version}</version>
+          </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
