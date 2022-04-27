@@ -58,7 +58,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>1.4</version>
+            <version>2.11.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.protobuf</groupId>
@@ -95,7 +95,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                de.bytestore.teamspeakextraction/de.bytestore.teamspeakextraction.HelloApplication
+                                <!--de.bytestore.teamspeakextraction/-->de.bytestore.teamspeakextraction.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
